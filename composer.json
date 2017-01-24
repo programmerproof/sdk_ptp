@@ -1,0 +1,20 @@
+{
+    "name": "place_to_pay/sdk-ptp",
+    "description": "Libreria para conectarse al webservice SOAP Place To Pay",
+    "homepage": "https://github.com/programmerproof/sdk_ptp",
+    "authors": [
+        {
+            "name": "Julian Andres Baquero Rico",
+            "email": "segquerenquer@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PlaceToPay\\SDK_PtP\\": "src"
+        }
+    }
+}
