@@ -1,4 +1,4 @@
-# Place To Pay php-sdk-pse
+# sdk_ptp
 
 Libreria para comunicarce para conectarse al webservice Place To Pay
 
