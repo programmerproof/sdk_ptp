@@ -10,7 +10,7 @@ Libreria para comunicarce para conectarse al webservice Place To Pay
 
 Se Instala vía composer
 
-composer require place_to_pay/sdk-ptp
+composer require place_to_pay/sdk_ptp
 
 ## Configuración
 
