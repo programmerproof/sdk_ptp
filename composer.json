@@ -1,5 +1,5 @@
 {
-    "name": "PtP/sdk_ptp",
+    "name": "p-t-p/sdk_ptp",
     "description": "Libreria para conectarse al webservice SOAP Place To Pay",
     "homepage": "https://github.com/programmerproof/sdk_ptp",
     "authors": [
