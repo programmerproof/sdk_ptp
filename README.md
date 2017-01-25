@@ -31,7 +31,7 @@ php
 2. tran_key: Llave
   
 ## Versión
-v1.0.0
+v1.1
 
 ## Licencia
 [MIT License](LICENSE)
