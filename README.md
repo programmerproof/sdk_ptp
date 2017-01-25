@@ -56,19 +56,19 @@ Valor devuelto: Devuelve un array con objetos
 
 Solicita la creacion de una transacción
 
-Parametros: Nombre, Tipo, Descripción |
+Parametros: Nombre, Tipo, Descripción.
 Valor devuelto: Devuelve la creacion de la transacción
 
 #### createTransactionMultiCredit()
 
 Solicita la creacion de una transacción con dispersión de fondos
 
-Parametros: Nombre, Tipo, Descripción
+Parametros: Nombre, Tipo, Descripción.
 Valor devuelto: Devuelve la creacion de la transacción
 
 #### getTransactionInformation()
 
 Obtiene la información de una transacción
 
-Parametros: Nombre, Tipo, Descripción
+Parametros: Nombre, Tipo, Descripción.
 Valor devuelto: Devuelve la informacion de la transacción
