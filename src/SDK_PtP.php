@@ -24,6 +24,25 @@ class SDK_PtP
 		$this->soapClient = new \SoapClient(self::$WSDL, array('encoding' => self::$ENCODING));
 	}//end __construct method
 
+    /* obtiene el método config con los datos de autenticación, 
+	 se encarga de preparar los datos del atributo config para la autenticación del webservice. 
+	 Retorna los valores de autenticación*/
+	private function authentication(){
+		//semilla para el consumo del webservice
+		$seed = date('c');
+		//llave transaccional para el consumo del webservice
+		$tranKey = sha1($seed . $this->config['tran_key'],false);
+
+		//identificador para el consumo del API
+		$authentication['login'] = $this->config['login'];
+		//llave para el consumo del API
+		$authentication['tranKey'] = $tranKey;
+		//semilla para el consumo del API en el proceso del hash * por SHA1 del tranKey, ISO 8601
+		$authentication['seed'] = $seed;
+
+		return array('auth' => $authentication);
+	}//end authentication method
+
 	/*retorna los bancos disponibles*/
 	public function getBankList()
 	{
@@ -67,23 +86,4 @@ class SDK_PtP
 
         return is_object($informacion) ? $informacion : null;
 	}//end getTransactionInformation method
-
-	/* obtiene el método config con los datos de autenticación, 
-	 se encarga de preparar los datos del atributo config para la autenticación del webservice. 
-	 Retorna los valores de autenticación*/
-	private function authentication(){
-		//semilla para el consumo del webservice
-		$seed = date('c');
-		//llave transaccional para el consumo del webservice
-		$tranKey = sha1($seed . $this->config['tran_key'],false);
-
-		//identificador para el consumo del API
-		$authentication['login'] = $this->config['login'];
-		//llave para el consumo del API
-		$authentication['tranKey'] = $tranKey;
-		//semilla para el consumo del API en el proceso del hash * por SHA1 del tranKey, ISO 8601
-		$authentication['seed'] = $seed;
-
-		return array('auth' => $authentication);
-	}//end authentication method
 }
